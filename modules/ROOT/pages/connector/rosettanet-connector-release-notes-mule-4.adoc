@@ -10,6 +10,85 @@ using RNIF 2.00.01. The connector automatically handles send timeouts and retrie
 and responds to received messages with the appropriate HTTP response and/or
 signal. Users work directly with the RosettaNet message service content as an XML document.
 
+
+== 2.0.3
+
+*July 5, 2019*
+
+=== Compatibility
+
+RosettaNet Connector v2.0.2 is compatible with:
+
+[%header,cols="30a,70a"]
+|===
+|Application/Service |Version
+|Mule Runtime |4.1.0 and later
+|Anypoint Studio |7.1.0 and later
+|PIP 0A1 Notification of Failure |v02.00
+|3A4 Request Purchase Order |v02.02 |
+|3A6 Distribute Order Status |v02.00, v02.02, v02.03
+|3B2 Notify of Advance Shipment |v01.00
+|3C3 Notify of Invoice |v01.00, v01.11
+|===
+
+=== Fixed in this Release
+
+* Corrected determination of when a received message needs to be signed (SE-12131).
+
+=== Known Issues
+
+The Mule 4 RosettaNet connector only supports:
+
+* Asynchronous response messages
+* RNIF 2.00.01
+* Cluster 3 PIPs (limited selection)
+* Message signing (optional), not encryption
+* Certificate revocation managed directly by the user in a keystore
+* The maximum supported message size is 5 MB
+* No support for attachments.
+
+It is not supported with Flow Designer.
+
+== 2.0.2
+
+*July 4, 2019*
+
+=== Compatibility
+
+RosettaNet Connector v2.0.2 is compatible with:
+
+[%header,cols="30a,70a"]
+|===
+|Application/Service |Version
+|Mule Runtime |4.1.0 and later
+|Anypoint Studio |7.1.0 and later
+|PIP 0A1 Notification of Failure |v02.00
+|3A4 Request Purchase Order |v02.02 |
+|3A6 Distribute Order Status |v02.00, v02.02, v02.03
+|3B2 Notify of Advance Shipment |v01.00
+|3C3 Notify of Invoice |v01.00, v01.11
+|===
+
+=== Fixed in this Release
+
+* Corrected handling of PIP settings for signing only in one direction, or only for actions vs. signals (SE-12131).
+* Fixed NullPointerException occurring on startup checking of queued messages when timed out (SE-12010).
+* Added acknowledgeData attribute to values supplied by Action Source, giving the MIME message sent as the acknowledgment to the received action message (SE-12307).
+
+=== Known Issues
+
+The Mule 4 RosettaNet connector only supports:
+
+* Asynchronous response messages
+* RNIF 2.00.01
+* Cluster 3 PIPs (limited selection)
+* Message signing (optional), not encryption
+* Certificate revocation managed directly by the user in a keystore
+* The maximum supported message size is 5 MB
+* No support for attachments.
+
+It is not supported with Flow Designer.
+
 == 2.0.1
 
 *May 8, 2019*
