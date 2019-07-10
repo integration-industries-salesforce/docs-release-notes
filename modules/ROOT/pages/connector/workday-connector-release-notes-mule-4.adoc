@@ -28,6 +28,8 @@ Depending on the connectivity conditions while using Workday connector in Anypoi
 === Features
 
 * Added support for Workday API version 32.1
+* Added support for TLS
+* Improved error description
 
 === Fixed in this Release
 
