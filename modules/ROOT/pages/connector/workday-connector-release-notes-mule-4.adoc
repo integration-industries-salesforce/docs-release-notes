@@ -14,7 +14,7 @@ Depending on the connectivity conditions while using Workday connector in Anypoi
 
 == 11.0.0
 
-*REALEASE-DATE*
+*July 16, 2019*
 
 === Compatibility
 
@@ -22,7 +22,7 @@ Depending on the connectivity conditions while using Workday connector in Anypoi
 |===
 |Software |Version
 |Mule Runtime |4.1.3 and later
-|Workday API |v28.0, v29.0, v30.0, v32.1
+|Workday API |v32.1
 |===
 
 === Features
